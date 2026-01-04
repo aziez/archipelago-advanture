@@ -21,11 +21,11 @@
       "title": "Secure Channels",
       "email": {
         "label": "Direct Frequency",
-        "value": "your.email@domain.com"
+        "value": "Aziz13.id@gmail.com"
       },
       "social": {
         "label": "Social Uplink",
-        "value": "@yourhandle"
+        "value": "@Aziez_muhksin"
       },
       "location": {
         "label": "Current Coordinates",
@@ -118,6 +118,7 @@
       "frontend": {
         "title": "Frontend Core"
       },
+      "engineering": { "title": "Mobile & Engineering" },
       "backend": {
         "title": "Backend Ops"
       },

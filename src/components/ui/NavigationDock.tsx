@@ -4,7 +4,6 @@
 import { useGameStore } from '@/stores/useGameStore';
 import { FloatingDock } from './floating-dock';
 import { ISLANDS } from '@/constants/island';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { useTranslations } from 'next-intl';
 
 export const NavigationDock = () => {
@@ -35,9 +34,6 @@ export const NavigationDock = () => {
       {/* Saya tambahkan flex-col & gap agar Switcher ada di bawah Dock dengan rapi */}
       <div className="pointer-events-auto flex flex-col items-center gap-4">
         <FloatingDock items={dockItems} />
-
-        {/* Tombol ganti bahasa (opsional: bisa taruh sini atau di pojok layar) */}
-        <LanguageSwitcher />
       </div>
     </div>
   );

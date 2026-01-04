@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { GlassPill } from '@/components/ui/glass-pill';
 
-// Helper component untuk animasi angka (Count Up)
+// Helper component for number animation
 const NumberTicker = ({ value }: { value: number }) => {
   return (
     <motion.span
@@ -28,8 +28,10 @@ export const GameHUD = () => {
 
   if (!isMount) return null;
 
+  // REMOVED: absolute top-4 right-4
+  // ADDED: flex-col items-start (to align to the left side of the screen)
   return (
-    <div className="absolute top-4 right-4 z-20 flex flex-col items-end gap-2 pointer-events-none">
+    <div className="flex flex-col items-start gap-2 pointer-events-none">
       {/* SCORE PILL */}
       <GlassPill className="px-4 py-2 flex items-center gap-3 pointer-events-auto">
         <div className="relative">
@@ -52,7 +54,7 @@ export const GameHUD = () => {
       </GlassPill>
 
       {/* CONTROLS HINT (HIDDEN ON MOBILE) */}
-      <div className="hidden md:block">
+      <div className="hidden md:block pointer-events-auto">
         <GlassPill className="px-3 py-2 flex flex-col gap-1 items-end bg-black/40">
           <div className="flex items-center gap-2 text-white/50 text-[10px] font-mono">
             <span>DRIVE</span>

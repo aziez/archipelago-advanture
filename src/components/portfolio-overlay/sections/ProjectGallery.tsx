@@ -1,13 +1,12 @@
 /** biome-ignore-all lint/suspicious/noExplicitAny: <noExplicitAny> */
 'use client';
 
-import { ProjectCard } from '../shared/ProjectCard';
 import { CharacterViewer } from '@/components/portfolio-overlay/shared/CharacterViewer';
+import { ProjectCard } from '@/components/portfolio-overlay/shared/ProjectCard';
 import { PackageOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-// --- 1. DATA CONFIG (Static Data: Images, Links, Tech Stack) ---
-// Key 'id' harus match dengan key di file JSON messages
+// --- 1. DATA CONFIG ---
 const projectsData = [
   {
     id: 'sportify',
@@ -81,34 +80,37 @@ export const ProjectGallery = () => {
   const t = useTranslations('Projects');
 
   return (
-    <div className="p-8 md:p-12 space-y-12">
+    // Added 'pb-safe' for mobile bottom handling if you have safe-area utils
+    <div className="p-4 md:p-8 lg:p-12 space-y-8 md:space-y-12 pb-24">
       {/* --- HEADER: 3D SHOWCASE --- */}
-      <div className="relative bg-linear-to-r from-blue-900/20 to-slate-900/50 rounded-3xl border border-white/10 overflow-hidden p-8 md:p-10">
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-linear-to-r from-blue-950/30 to-slate-900/60 p-6 md:p-10">
+        {/* Background Glow Effect */}
+        <div className="absolute top-0 right-0 h-full w-2/3 bg-blue-500/10 blur-[80px] md:blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
+        <div className="grid gap-8 items-center relative z-10 md:grid-cols-2">
           {/* Left: Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-mono tracking-widest uppercase">
               <PackageOpen size={14} />
               {t('header.tag')}
             </div>
 
-            <div className="space-y-2">
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+            <div className="space-y-3">
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
                 {t('header.title_prefix')} <br />
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">
                   {t('header.title_highlight')}
                 </span>
               </h2>
-              <p className="text-slate-400 text-lg leading-relaxed max-w-md">
+              <p className="text-slate-400 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
                 {t('header.description')}
               </p>
             </div>
           </div>
 
           {/* Right: 3D Viewer */}
-          <div className="h-75 w-full relative">
+          {/* Adjusted height for mobile to be smaller */}
+          <div className="h-62.5 md:h-75 w-full relative">
             <div className="absolute inset-0 border border-white/5 rounded-2xl bg-black/20 backdrop-blur-sm" />
             <CharacterViewer scale={1.8} offset={[0, 0, 0]}>
               <ProjectArtifact />
@@ -123,14 +125,12 @@ export const ProjectGallery = () => {
       </div>
 
       {/* --- PROJECT GRID --- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
-            // Ambil text dari JSON berdasarkan ID. Type assertion diperlukan karena `t` tidak secara otomatis tahu semua kemungkinan `project.id`.
             title={t(`list.${project.id}.title` as any)}
             desc={t(`list.${project.id}.desc` as any)}
-            // Data statis dari array local
             tags={project.tags}
             image={project.image}
             link={project.href}

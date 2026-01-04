@@ -169,28 +169,45 @@ export const SkillsArsenal = () => {
       </div>
 
       {/* SKILLS GRID */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
+        {/* 1. CREATIVE & FRONTEND: Web + 3D Modeling Assets */}
         <SkillCategory
-          title={t('categories.frontend.title')} // Translate Judul Kategori
+          title={t('categories.frontend.title')} // "Inti Frontend" / "Frontend Core"
           icon={<Code2 />}
           accentColor="bg-blue-500"
           skills={[
-            // Nama Skill & Level biarkan Hardcoded (Universal)
-            { name: 'React / Next.js', level: 95 },
-            { name: 'TypeScript', level: 90 },
-            { name: 'Three.js / R3F', level: 85 },
-            { name: 'Tailwind CSS', level: 95 },
+            { name: 'React / Next.js / Remix', level: 98 },
+            { name: 'Three.js / R3F / WebGL', level: 90 },
+            { name: 'Blender / 3ds Max (3D)', level: 85 }, // Aset visual custom
+            { name: 'Tailwind / Shadcn UI', level: 95 },
+            { name: 'TypeScript / ES6+', level: 92 },
           ]}
         />
+
+        {/* 2. ENGINEERING & MOBILE: Native, Hardware & Systems */}
         <SkillCategory
-          title={t('categories.backend.title')}
+          title="Engineering & Mobile" // Bisa ditranslate atau hardcode "Engineering"
+          icon={<Cpu />} // Icon CPU cocok untuk low-level/hardware
+          accentColor="bg-amber-500"
+          skills={[
+            { name: 'Android Native (Java)', level: 85 }, // Skill Mobile Native
+            { name: 'Ionic / Capacitor', level: 90 }, // Skill Mobile Hybrid
+            { name: 'Arduino / C++ / IoT', level: 80 }, // Hardware interaction
+            { name: 'C# / .NET Ecosystem', level: 85 }, // Strong typing logic
+          ]}
+        />
+
+        {/* 3. BACKEND & INFRA: Server & Cloud */}
+        <SkillCategory
+          title={t('categories.backend.title')} // "Operasi Backend"
           icon={<Server />}
           accentColor="bg-purple-500"
           skills={[
-            { name: 'Node.js', level: 85 },
-            { name: 'PostgreSQL', level: 80 },
-            { name: 'Supabase', level: 90 },
-            { name: 'GraphQL', level: 75 },
+            { name: 'Laravel / TALL Stack', level: 90 },
+            { name: 'Node.js / NestJS', level: 85 },
+            { name: 'PostgreSQL / MySQL', level: 88 },
+            { name: 'AWS / Docker / Ubuntu', level: 80 },
+            { name: 'Git / CI/CD Pipelines', level: 90 },
           ]}
         />
         <SkillCategory

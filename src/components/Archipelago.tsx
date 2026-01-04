@@ -9,7 +9,7 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 // Imports Models & Logic
-import type { IslandData } from '@/stores/useGameStore';
+import { useGameStore, type IslandData } from '@/stores/useGameStore';
 import { HomeIsland } from '@/components/scene/island/HomeIsland';
 import { SkillsIsland } from '@/components/scene/island/SkillsIsland';
 import { ContactIsland } from '@/components/scene/island/ContactIsland';
@@ -27,6 +27,7 @@ import { useTranslations } from 'next-intl';
 // SETTINGS
 const DEBUG_MODE = false;
 const COLLISION_RADIUS = 35;
+const DOCKING_TRIGGER_RADIUS = 45;
 
 interface ArchipelagoProps {
   islands: IslandData[];
@@ -35,6 +36,25 @@ interface ArchipelagoProps {
 
 // 1. OPTIMASI: Bungkus Component Utama dengan memo
 const Archipelago = memo(({ islands, onIslandClick }: ArchipelagoProps) => {
+  const openModal = useGameStore((state) => state.openModal);
+  const boatPositionRef = useGameStore((state) => state.boatPositionRef);
+
+  // 3. LOGIC SMART CLICK
+  const handleIslandClick = (island: IslandData) => {
+    const boatPos = boatPositionRef.current;
+    const islandDockPos = new THREE.Vector3(...island.dockPosition);
+
+    // Hitung jarak
+    const distance = boatPos.distanceTo(islandDockPos);
+
+    // Jika kapal sudah sangat dekat dengan pulau yang diklik...
+    if (distance < DOCKING_TRIGGER_RADIUS) {
+      openModal(island.id);
+    } else {
+      onIslandClick(island);
+    }
+  };
+
   return (
     <group>
       {islands.map((island, index) => (
@@ -42,7 +62,7 @@ const Archipelago = memo(({ islands, onIslandClick }: ArchipelagoProps) => {
           key={island.id}
           index={index}
           data={island}
-          onClick={() => onIslandClick(island)}
+          onClick={() => handleIslandClick(island)}
         />
       ))}
     </group>

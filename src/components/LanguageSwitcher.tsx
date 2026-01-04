@@ -6,17 +6,17 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-// Konfigurasi Bahasa & Path Bendera
+// Language Configuration & Flag Paths
 const LANGUAGES = [
-  { id: 'en', label: 'EN', flag: '/us.svg' }, // Mengarah ke public/en.svg
-  { id: 'id', label: 'ID', flag: '/id.svg' }, // Mengarah ke public/id.svg
+  { id: 'en', label: 'EN', flag: '/us.svg' }, // Points to public/us.svg
+  { id: 'id', label: 'ID', flag: '/id.svg' }, // Points to public/id.svg
 ] as const;
 
 export const LanguageSwitcher = () => {
   const { locale, setLocale } = useLanguageStore();
 
   return (
-    <div className="flex items-center p-1 bg-black/20 backdrop-blur-md border border-white/10 rounded-full">
+    <div className="flex items-center p-1 bg-black/20 backdrop-blur-md border border-white/10 rounded-full pointer-events-auto">
       {LANGUAGES.map((lang) => {
         const isActive = locale === lang.id;
 

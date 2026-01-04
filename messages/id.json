@@ -21,7 +21,7 @@
       "title": "Saluran Aman",
       "email": {
         "label": "Frekuensi Langsung",
-        "value": "your.email@domain.com"
+        "value": "Aziz13.id@gmail.com"
       },
       "social": {
         "label": "Uplink Sosial",
@@ -121,6 +121,7 @@
       "backend": {
         "title": "Operasi Backend"
       },
+      "engineering": { "title": "Mobile & Rekayasa" },
       "tools": {
         "title": "Alat & Infrastruktur"
       }

@@ -10,7 +10,7 @@ export const HomeProfile = () => {
   const t = useTranslations('Home');
 
   return (
-    <div className="grid md:grid-cols-12 gap-0 min-h-full pointer-events-none">
+    <div className="grid md:grid-cols-12 gap-0 min-h-full pointer-events-auto">
       {/* Left: Visual Avatar (Hero) */}
       <div className="md:col-span-5 bg-linear-to-br from-blue-900/40 to-slate-900 relative min-h-75 md:min-h-auto p-8 flex flex-col justify-end border-r border-white/10">
         <div
@@ -74,8 +74,16 @@ export const HomeProfile = () => {
         </div>
 
         <div className="pt-4 flex gap-4">
-          <SocialBtn icon={<Github size={18} />} label="GitHub" />
-          <SocialBtn icon={<Linkedin size={18} />} label="LinkedIn" />
+          <SocialBtn
+            href="https://github.com/aziez"
+            icon={<Github size={18} />}
+            label="GitHub"
+          />
+          <SocialBtn
+            href="https://www.linkedin.com/in/aziez13/"
+            icon={<Linkedin size={18} />}
+            label="LinkedIn"
+          />
         </div>
       </div>
     </div>

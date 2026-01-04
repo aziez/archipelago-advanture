@@ -2,7 +2,7 @@
 
 import { Suspense, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Loader, Stats } from '@react-three/drei';
+import { Loader } from '@react-three/drei';
 import Ocean from '@/components/Ocean';
 import { motion } from 'framer-motion';
 
@@ -31,6 +31,7 @@ import { ClickMarker } from '@/components/scene/ClickMarker';
 import { PortfolioOverlay } from '@/components/portfolio-overlay';
 import { Seagulls } from '@/components/scene/part/Seagulls';
 import { Shark } from '@/components/scene/part/Shark';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 const Scene = () => {
   const { time, theme, setTargetIsland, isCinematic } = useGameStore();
@@ -52,41 +53,65 @@ const Scene = () => {
 
   return (
     <div
-      className={`w-full h-screen relative transition-colors duration-1000 bg-linear-to-b ${atmosphereColors.bg}`}
+      className={`w-full h-screen relative transition-colors duration-1000 bg-linear-to-b ${atmosphereColors.bg} overflow-hidden`}
     >
       <Loader dataInterpolation={(p) => `Loading World... ${p.toFixed(0)}%`} />
+
       <CinematicIntro />
+
+      {/* --- UI LAYER --- */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
-          opacity: isCinematic ? 0 : 1, // Hilang saat cinematic, muncul saat selesai
-          pointerEvents: 'none', // Agar tidak bisa diklik saat invisible
+          opacity: isCinematic ? 0 : 1,
+          pointerEvents: 'none',
         }}
         transition={{ duration: 1.5, delay: isCinematic ? 0 : 1 }}
-        className="absolute inset-0 z-40 pointer-events-none"
+        // Layout Utama: Flex Column untuk memisahkan Atas dan Bawah
+        className="absolute inset-0 z-40 flex flex-col justify-between pointer-events-none"
       >
-        <div className="pointer-events-auto">
-          <TimeControls />
+        {/* --- HEADER SECTION (Top Left & Top Right) --- */}
+        <div className="w-full flex justify-between items-start p-4 md:p-6">
+          {/* Top Left: Game Status / HUD */}
+          <div className="pointer-events-auto ">
+            <GameHUD />
+          </div>
+          <div className="pointer-events-auto ">
+            <LanguageSwitcher />
+          </div>
+
+          {/* Top Right: System Controls (Time & Language) */}
+          {/* Disusun vertikal (col) agar rapi di pojok kanan */}
+          <div className="flex flex-col items-end gap-3 pointer-events-auto">
+            <TimeControls />
+          </div>
         </div>
 
-        <MobileControls />
+        {/* --- FOOTER SECTION (Controls & Dock) --- */}
+        <div className="relative w-full pb-6 md:pb-8">
+          {/* Layer 1: Mobile Controls (Joystick) - Z-Index Rendah */}
+          {/* Posisinya absolute memenuhi area bawah agar jempol leluasa */}
+          <div className="absolute inset-0 z-10">
+            <MobileControls />
+          </div>
 
-        <div className="pointer-events-auto">
-          <NavigationDock />
+          {/* Layer 2: Navigation Dock (Center Bottom) - Z-Index Tinggi */}
+          {/* Supaya dock tidak tertutup joystick area */}
+          <div className="relative z-20 flex justify-center pointer-events-auto px-4">
+            <NavigationDock />
+          </div>
         </div>
-
-        <div className="pointer-events-auto">
-          <GameHUD />
-        </div>
-
-        {/* <ControlsHelp /> */}
       </motion.div>
+
+      {/* --- OVERLAY LAYER (Modal Portfolio) --- */}
       <div className="relative z-50">
         <PortfolioOverlay />
       </div>
+
+      {/* --- 3D CANVAS LAYER --- */}
       <Canvas
         shadows
-        dpr={[1, 1.5]}
+        dpr={[1, 1.5]} // Performance optimization for mobile
         className="w-full h-full"
         gl={{
           alpha: true,
@@ -103,28 +128,20 @@ const Scene = () => {
         <Suspense fallback={null}>
           <TimeManager />
           <SoundManager />
-
           <Lighting />
-
-          <Stats />
 
           <SkyBox />
           <ClickMarker />
           <Boat />
           <Shark scale={0.5} />
           <Collectibles />
-
           <Seagulls />
 
           <Archipelago islands={ISLANDS} onIslandClick={setTargetIsland} />
           <Ocean theme={theme} />
 
           <EffectComposer resolutionScale={0.75} multisampling={0}>
-            <Bloom
-              luminanceThreshold={2} // Naikkan threshold biar cuma matahari yg glow
-              mipLevels={4} // Turunkan dari 9 ke 4 (Glow jadi kurang halus dikit, tapi jauh lebih ringan)
-              intensity={1}
-            />
+            <Bloom luminanceThreshold={2} mipLevels={4} intensity={1} />
             <Vignette eskil={false} offset={0.1} darkness={0.5} />
           </EffectComposer>
         </Suspense>

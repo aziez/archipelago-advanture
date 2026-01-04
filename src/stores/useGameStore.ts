@@ -103,7 +103,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     // Baru (0.05) -> 1 Hari = 8 Menit (Slow & Relaxing)
     // Jika mau lebih lambat lagi, ubah jadi 0.02
 
-    const hourIncrement = delta * 0.02 * speed;
+    const hourIncrement = delta * 0.16 * speed;
 
     let newHour = time + hourIncrement;
     if (newHour >= 24) newHour = 0;

@@ -1,5 +1,7 @@
 'use client';
 
+import { TypewriterEffect } from '@/components/ui/typewriter-effect';
+import { TypingAnimation } from '@/components/ui/typing-animation';
 import { useGameStore } from '@/stores/useGameStore';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,9 +30,12 @@ export const CinematicIntro = () => {
             className="absolute inset-0 flex items-center justify-center"
           >
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white tracking-[0.5em] uppercase font-mono text-shadow-lg">
-                The Voyage
-              </h1>
+              <TypingAnimation
+                words={['The Voyage']}
+                className="text-4xl md:text-6xl font-bold text-white tracking-[0.5em] uppercase font-mono text-shadow-lg"
+                typeSpeed={200}
+                delay={500}
+              />
               <p className="text-white/60 mt-4 text-sm tracking-widest">
                 INTERACTIVE PORTFOLIO
               </p>

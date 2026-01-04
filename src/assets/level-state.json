@@ -1,0 +1,204 @@
+{
+  "sheetsById": {
+    "Main Map": {
+      "staticOverrides": {
+        "byObject": {
+          "Island: home": {
+            "scale": -1.1000000000000174,
+            "position": {
+              "x": -10,
+              "y": 13.199999999999992
+            }
+          },
+          "Island Visual: home": {
+            "scale": 30,
+            "position": {
+              "x": 3,
+              "y": 0,
+              "z": 22
+            }
+          },
+          "Island Visual: projects": {
+            "scale": 1.7000000000000004
+          },
+          "Island Visual: skills": {
+            "scale": 12
+          },
+          "Island Visual: contact": {
+            "scale": 21.10000000000001
+          },
+          "Island Visual: resume": {
+            "scale": 25
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Island Visual: home": {
+            "trackData": {
+              "xowYyX_05Z": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Island Visual: home:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "e1GO_E0uVs",
+                    "position": 1.267,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.4999999999999998
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "xowYyX_05Z"
+            }
+          },
+          "Island Visual: projects": {
+            "trackData": {
+              "P723yye62P": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Island Visual: projects:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "CxKneJjZgA",
+                    "position": 2.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.98,
+                      0.335,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.7000000000000004
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "P723yye62P"
+            }
+          },
+          "Island Visual: skills": {
+            "trackData": {
+              "eC0AXaJ2HI": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Island Visual: skills:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "PV-8zpOSd8",
+                    "position": 2.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.98,
+                      0.335,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 12
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "eC0AXaJ2HI"
+            }
+          },
+          "Island Visual: contact": {
+            "trackData": {
+              "ksMBRXO2VO": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Island Visual: contact:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "6FM0QmXL9F",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 16
+                  },
+                  {
+                    "id": "G8x_F5RAdv",
+                    "position": 2.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.98,
+                      0.335,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 21.000000000000007
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "ksMBRXO2VO"
+            }
+          },
+          "Island Visual: resume": {
+            "trackData": {
+              "TGTHSiTu7h": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Island Visual: resume:[\"scale\"]",
+                "keyframes": [
+                  {
+                    "id": "fJouqVLnVx",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.6
+                  },
+                  {
+                    "id": "pg6dWIcCzE",
+                    "position": 2.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.98,
+                      0.335,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 25
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scale\"]": "TGTHSiTu7h"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "N1H3Ux4AGrVPNhZ5"
+  ]
+}

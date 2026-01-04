@@ -1,0 +1,176 @@
+{
+  "Islands": {
+    "home": "Markas Utama",
+    "projects": "Teluk Harta",
+    "skills": "Menara Sihir",
+    "contact": "Kantor Pos",
+    "resume": "Pustaka Arsip"
+  },
+  "Home": {
+    "exp": "Pengalaman",
+    "location": "Lokasi",
+    "mission_desc": "Ahoy! Saya adalah pengembang kreatif yang mengarungi samudra digital. Berbeda dengan kapten konvensional, kompas saya mengarah pada <blue>pengalaman web interaktif</blue>.",
+    "mission_sub": "Saya menjembatani kesenjangan antara desain statis dan dunia 3D imersif menggunakan React Three Fiber. Saat tidak sedang menjelajahi basis kode, saya biasanya bereksperimen dengan shader atau meracik espresso yang sempurna. ☕☕",
+    "role": "PENJELAJAH FULL STACK",
+    "title": "Catatan Misi",
+    "years": "4+ Tahun"
+  },
+  "Contact": {
+    "status": "UPLINK SIAP",
+    "channels": {
+      "title": "Saluran Aman",
+      "email": {
+        "label": "Frekuensi Langsung",
+        "value": "your.email@domain.com"
+      },
+      "social": {
+        "label": "Uplink Sosial",
+        "value": "@yourhandle"
+      },
+      "location": {
+        "label": "Koordinat Saat Ini",
+        "value": "Jakarta, Indonesia"
+      }
+    },
+    "header": {
+      "title": "TRANSMISI",
+      "subtitle": "Membangun koneksi P2P yang aman...<br>Silakan enkripsi pesan Anda di bawah ini.</br>"
+    },
+    "form": {
+      "name": {
+        "label": "Identitas (Nama)",
+        "placeholder": "Masukkan ID Anda"
+      },
+      "email": {
+        "label": "Frekuensi (Email)",
+        "placeholder": "nama@domain.com"
+      },
+      "message": {
+        "label": "Paket Data (Pesan)",
+        "placeholder": "Ketik pesan terenkripsi Anda..."
+      },
+      "submit_btn": "MULAI UPLINK"
+    },
+    "validation": {
+      "name_required": "ID wajib diisi (min 2 karakter).",
+      "email_invalid": "Format frekuensi tidak valid.",
+      "message_short": "Paket data terlalu kecil."
+    },
+    "success": {
+      "title": "Paket Terkirim!",
+      "desc": "Transmisi Anda telah berhasil diunggah ke server. Kapten akan segera merespons.",
+      "btn_another": "Kirim Lainnya"
+    }
+  },
+  "Projects": {
+    "header": {
+      "tag": "Koleksi Artefak",
+      "title_prefix": "PENEMUAN",
+      "title_highlight": "UNGGULAN",
+      "description": "Koleksi artefak digital dan eksperimen interaktif pilihan yang diambil dari basis kode saya. Silakan tarik objek di sebelah kanan untuk memeriksa strukturnya.",
+      "figure_label": "GBR. 01"
+    },
+    "list": {
+      "sportify": {
+        "title": "Sportify",
+        "desc": "Platform andalan untuk menemukan mitra olahraga dan menyewa peralatan. Dibangun untuk mendukung kesehatan fisik dan mental Generasi Z."
+      },
+      "best_event": {
+        "title": "Best Event Solution",
+        "desc": "Mentransformasi kerumitan menjadi acara yang terorganisir. Alat manajemen yang membantu penyelenggara mencapai target acara tanpa hambatan."
+      },
+      "idec": {
+        "title": "Indonesia Dental Exhibition",
+        "desc": "Wajah digital dari pameran gigi terbesar di Jakarta. Sebuah hub profesional yang menghubungkan pemimpin industri dengan teknologi medis."
+      },
+      "bifest": {
+        "title": "BI Fest Virtual Exhibition",
+        "desc": "Jelajahi Bank Indonesia tanpa meninggalkan kursi Anda. Tur virtual 360° imersif yang mengeksplorasi budaya dan nilai-nilai luhur."
+      },
+      "product_list": {
+        "title": "Daftar Produk & Keranjang",
+        "desc": "Interaksi e-commerce yang sangat mulus. Sebuah pendalaman teknis mengenai manajemen state yang kompleks dan pola UI yang responsif."
+      },
+      "ip_tracker": {
+        "title": "Pelacak Alamat IP",
+        "desc": "Di mana lokasi IP tersebut? Pelacak waktu-nyata yang memvisualisasikan data menggunakan peta Leaflet dan panggilan API yang presisi."
+      },
+      "advice_gen": {
+        "title": "Generator Saran",
+        "desc": "Membutuhkan pencerahan? Cukup satu klik. Aplikasi minimalis dan responsif yang menyajikan saran kehidupan acak melalui integrasi API."
+      },
+      "url_shortener": {
+        "title": "API Pemendek URL",
+        "desc": "Meringkas tautan yang panjang dan tidak rapi. Pemendek URL fungsional yang mengemas Clean URI API dalam paket yang efisien."
+      }
+    }
+  },
+  "Skills": {
+    "header": {
+      "tag": "Kapabilitas Sistem",
+      "title_prefix": "ARSENAL",
+      "title_highlight": "TEKNIS",
+      "description": "Tinjauan mendalam mengenai sistem inti, bahasa pemrograman, dan perangkat yang diterapkan dalam alur kerja pengembangan saya. Berjalan pada efisiensi 100%.",
+      "status": "STATUS INTI: STABIL",
+      "metrics": "SUHU: 45°C // BEBAN: 24%"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Inti Frontend"
+      },
+      "backend": {
+        "title": "Operasi Backend"
+      },
+      "tools": {
+        "title": "Alat & Infrastruktur"
+      }
+    }
+  },
+  "Resume": {
+    "header": {
+      "title": "CATATAN KAPTEN",
+      "subtitle": "Arsip kronologis misi dan peran.",
+      "status_label": "Status Saat Ini",
+      "status_text": "Terbuka untuk Peluang",
+      "education_title": "Pendidikan",
+      "download_btn": "Unduh Resume Lengkap"
+    },
+    "education": {
+      "degree": "Sarjana Teknik Informatika",
+      "school": "Universitas Pamulang",
+      "years": "2018 - 2022"
+    },
+    "timeline": {
+      "udana": {
+        "role": "Full Stack Developer",
+        "company": "PT Dana Rintis Indonesia",
+        "year": "Agu 2025 - Sekarang",
+        "desc": "Merancang dan memelihara aplikasi full-stack yang skalabel menggunakan TALL stack (Tailwind, Alpine, Laravel, Livewire) bersama Next.js dan Inertia. Saya mengelola seluruh pipeline deployment di AWS, mengoptimalkan kinerja server, dan memastikan ketersediaan sistem yang tinggi (high availability). Peran saya mencakup pembangunan API yang tangguh, penciptaan pengalaman frontend yang mulus, serta penanganan migrasi basis data yang kompleks untuk sistem SCF."
+      },
+      "sfund": {
+        "role": "Front-End Developer",
+        "company": "PT Surya Fajar Urun Dana",
+        "year": "Feb 2023 - Agu 2025",
+        "desc": "Memimpin arsitektur frontend untuk platform investasi SFund. Saya memelopori migrasi ke Next.js App Router dan TypeScript, yang secara signifikan meningkatkan skalabilitas dan pengalaman pengembang (DX). Peran saya menjembatani logika finansial yang kompleks dengan antarmuka yang ramah pengguna, mengintegrasikan e-KYC dan gerbang pembayaran, serta membimbing tim dalam penerapan pola React modern."
+      },
+      "freelance": {
+        "role": "Freelance Web Developer",
+        "company": "Jarak Jauh (Remote)",
+        "year": "Jun 2017 - Feb 2023",
+        "desc": "Menghadirkan beragam solusi digital, mulai dari tur virtual imersif untuk proyek perumahan hingga situs web manajemen acara yang komprehensif. Saya merekayasa tema WordPress kustom untuk pameran besar seperti IDEC dan membangun alat khusus seperti sistem absensi RFID, yang menunjukkan kemampuan adaptasi saya di berbagai tech stack."
+      },
+      "lokcay": {
+        "role": "Software Developer - VR",
+        "company": "Lokcay Studio",
+        "year": "Feb 2020 - Jan 2023",
+        "desc": "Merintis pengembangan aplikasi VR lintas platform menggunakan Ionic dan Capacitor. Fokus utama saya adalah menciptakan pengalaman tur virtual 360° yang berjalan mulus di web dan seluler, mengoptimalkan kinerja, serta mengintegrasikan fitur perangkat native untuk perjalanan pengguna yang benar-benar imersif."
+      },
+      "piranasia": {
+        "role": "IT Support Lead",
+        "company": "PT Piranasia Impressa",
+        "year": "2017 - 2023",
+        "desc": "Mengelola seluruh infrastruktur IT, memastikan nol downtime untuk operasional bisnis yang kritis. Selain pemecahan masalah teknis dan keamanan jaringan, saya mengefisienkan manajemen data dengan konfigurasi NAS dan mengembangkan standar dokumentasi internal yang meningkatkan efisiensi tim secara keseluruhan."
+      }
+    }
+  }
+}

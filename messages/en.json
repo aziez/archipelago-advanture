@@ -1,0 +1,176 @@
+{
+  "Islands": {
+    "home": "Home Base",
+    "projects": "Treasure Cove",
+    "skills": "Wizard Tower",
+    "contact": "Post Office",
+    "resume": "Resume Library"
+  },
+  "Home": {
+    "exp": "Experience",
+    "location": "Location",
+    "mission_desc": "Ahoy! I'm a creative developer navigating the digital ocean. Unlike traditional captains, my compass points towards <blue>interactive web experiences</blue>.",
+    "mission_sub": "I bridge the gap between static design and immersive 3D worlds using React Three Fiber. When I'm not sailing through codebases, you can find me optimizing shaders or brewing the perfect espresso. ☕☕",
+    "role": "FULL STACK EXPLORER",
+    "title": "Mission Log",
+    "years": "4+ Years"
+  },
+  "Contact": {
+    "status": "UPLINK_READY",
+    "channels": {
+      "title": "Secure Channels",
+      "email": {
+        "label": "Direct Frequency",
+        "value": "your.email@domain.com"
+      },
+      "social": {
+        "label": "Social Uplink",
+        "value": "@yourhandle"
+      },
+      "location": {
+        "label": "Current Coordinates",
+        "value": "Jakarta, Indonesia"
+      }
+    },
+    "header": {
+      "title": "TRANSMISSION",
+      "subtitle": "Establishing secure P2P connection...<br>Please encode your message below.</br>"
+    },
+    "form": {
+      "name": {
+        "label": "Identifier (Name)",
+        "placeholder": "Enter your ID"
+      },
+      "email": {
+        "label": "Frequency (Email)",
+        "placeholder": "name@domain.com"
+      },
+      "message": {
+        "label": "Data Packet (Message)",
+        "placeholder": "Type your encrypted message..."
+      },
+      "submit_btn": "INITIATE UPLINK"
+    },
+    "validation": {
+      "name_required": "ID required (min 2 chars).",
+      "email_invalid": "Invalid frequency format.",
+      "message_short": "Data packet too small."
+    },
+    "success": {
+      "title": "Packet Sent!",
+      "desc": "Your transmission has been successfully uploaded to the server. Captain will respond shortly.",
+      "btn_another": "Send Another"
+    }
+  },
+  "Projects": {
+    "header": {
+      "tag": "Artifact Collection",
+      "title_prefix": "FEATURED",
+      "title_highlight": "DISCOVERIES",
+      "description": "Selected digital artifacts and interactive experiments retrieved from my codebase. Drag the object on the right to inspect the structure.",
+      "figure_label": "FIG. 01"
+    },
+    "list": {
+      "sportify": {
+        "title": "Sportify",
+        "desc": "Your go-to platform for finding workout buddies and renting gear. Built to boost Gen Z's physical and mental wellness."
+      },
+      "best_event": {
+        "title": "Best Event Solution",
+        "desc": "Streamlining chaos into organized events. A management tool helping organizers hit their targets without the headache."
+      },
+      "idec": {
+        "title": "Indonesia Dental Exhibition",
+        "desc": "The digital face of Jakarta's biggest dental expo. A professional hub connecting industry leaders and medical tech."
+      },
+      "bifest": {
+        "title": "BI Fest Virtual Exhibition",
+        "desc": "Step inside Bank Indonesia without leaving your chair. An immersive 360° virtual tour exploring culture and values."
+      },
+      "product_list": {
+        "title": "Product List with Cart",
+        "desc": "Silky smooth e-commerce interactions. A deep dive into complex state management and snappy UI patterns."
+      },
+      "ip_tracker": {
+        "title": "IP Address Tracker",
+        "desc": "Where in the world is that IP? A real-time tracker visualizing data with Leaflet maps and precise API calls."
+      },
+      "advice_gen": {
+        "title": "Advice Generator",
+        "desc": "Need wisdom? Just click. A minimal, responsive app serving random life advice via API integration."
+      },
+      "url_shortener": {
+        "title": "URL Shortening API",
+        "desc": "Taming long, ugly links. A functional URL shortener wrapping the Clean URI API in a neat package."
+      }
+    }
+  },
+  "Skills": {
+    "header": {
+      "tag": "System Capabilities",
+      "title_prefix": "TECHNICAL",
+      "title_highlight": "ARSENAL",
+      "description": "Overview of the core systems, languages, and tools deployed in my development workflow. Running at 100% efficiency.",
+      "status": "CORE_STATUS: STABLE",
+      "metrics": "TEMP: 45°C // LOAD: 24%"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Frontend Core"
+      },
+      "backend": {
+        "title": "Backend Ops"
+      },
+      "tools": {
+        "title": "Tools & Infra"
+      }
+    }
+  },
+  "Resume": {
+    "header": {
+      "title": "CAPTAIN'S LOG",
+      "subtitle": "Chronological archive of missions and roles.",
+      "status_label": "Current Status",
+      "status_text": "Open to Work",
+      "education_title": "Education",
+      "download_btn": "Download Full Resume"
+    },
+    "education": {
+      "degree": "Bachelor of Computer Science",
+      "school": "University of Pamulang",
+      "years": "2018 - 2022"
+    },
+    "timeline": {
+      "udana": {
+        "role": "Full Stack Developer",
+        "company": "PT Dana Rintis Indonesia",
+        "year": "Aug 2025 - Present",
+        "desc": "Architecting and maintaining scalable full-stack applications using the TALL stack (Tailwind, Alpine, Laravel, Livewire) alongside Next.js and Inertia. I manage the entire deployment pipeline on AWS, optimizing server performance and ensuring high availability. My role involves building robust APIs, crafting seamless frontend experiences, and handling complex database migrations for SCF systems."
+      },
+      "sfund": {
+        "role": "Front-End Developer",
+        "company": "PT Surya Fajar Urun Dana",
+        "year": "Feb 2023 - Aug 2025",
+        "desc": "Leading the frontend architecture for SFund's investment platform. I spearheaded the migration to Next.js App Router and TypeScript, significantly improving scalability and developer experience. My role involves bridging the gap between complex financial logic and user-friendly interfaces, integrating e-KYC and payment gateways, and mentoring the team on modern React patterns."
+      },
+      "freelance": {
+        "role": "Freelance Web Developer",
+        "company": "Remote",
+        "year": "Jun 2017 - Feb 2023",
+        "desc": "Delivered diverse digital solutions ranging from immersive virtual tours for housing projects to comprehensive event management websites. I engineered custom WordPress themes for major exhibitions like IDEC and built specialized tools like RFID attendance systems, demonstrating adaptability across various tech stacks."
+      },
+      "lokcay": {
+        "role": "Software Developer - VR",
+        "company": "Lokcay Studio",
+        "year": "Feb 2020 - Jan 2023",
+        "desc": "Pioneered the development of cross-platform VR applications using Ionic and Capacitor. I focused on creating seamless 360° virtual tour experiences that work flawlessly across web and mobile, optimizing performance and integrating native device features for a truly immersive user journey."
+      },
+      "piranasia": {
+        "role": "IT Support Lead",
+        "company": "PT Piranasia Impressa",
+        "year": "2017 - 2023",
+        "desc": "Managed the entire IT infrastructure, ensuring zero downtime for critical business operations. Beyond troubleshooting and network security, I streamlined data management with NAS configurations and developed internal documentation standards that improved team efficiency."
+      }
+    }
+  }
+}

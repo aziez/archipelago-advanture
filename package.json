@@ -27,6 +27,7 @@
     "@theatre/studio": "^0.7.2",
     "@types/howler": "^2.2.12",
     "@types/three": "^0.182.0",
+    "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",

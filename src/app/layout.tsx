@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import '@/app/globals.css';
 import ClientI18nProvider from '@/providers/ClientI18nProvider';
@@ -112,6 +113,7 @@ export default function RootLayout({
     >
       <body className="bg-slate-950 text-slate-100 overflow-hidden">
         <ClientI18nProvider>{children}</ClientI18nProvider>
+        <Analytics />
       </body>
     </html>
   );
